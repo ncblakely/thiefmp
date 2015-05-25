@@ -1,0 +1,333 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 460
+        VERTGUIDE, 459
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+        HORZGUIDE, 189
+    END
+
+    IDD_HOST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 357
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_CONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_CHGMISS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_PLAYERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_BROWSER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 407
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONSOLE DIALOGEX 0, 0, 467, 195
+STYLE DS_SETFONT | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+MENU IDR_MAINMENU
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_CMD_EDIT,7,176,400,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Send",IDC_SEND,417,176,43,14,WS_DISABLED
+    LTEXT           "Chat:",IDC_STATIC,7,168,21,8
+    EDITTEXT        IDC_OUTPUT_BOX,7,7,453,156,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+IDD_HOST DIALOGEX 0, 0, 364, 187
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Host a Server"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Server name:",IDC_STATIC,24,25,44,8
+    EDITTEXT        IDC_SERVERNAME,69,21,108,12,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,34,39,34,8
+    EDITTEXT        IDC_PASSWORD,69,36,108,12,ES_AUTOHSCROLL
+    LTEXT           "Game type:",IDC_STATIC,30,54,40,9
+    COMBOBOX        IDC_OPT_GAMETYPE,69,51,109,52,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_OPT_MISS,69,66,109,88,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_OPT_MAXPLAYERS,69,82,36,66,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_OPT_PORT,132,82,36,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "List on global server",IDC_LISTSERVCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,98,89,9
+    CONTROL         "Time limit:",IDC_TIMELIMITCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,121,44,11
+    EDITTEXT        IDC_TIMELIMIT,119,119,31,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC,157,121,24,8
+    CONTROL         "Save limit per mission:",IDC_SAVELIMITCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,135,82,11
+    EDITTEXT        IDC_SAVELIMIT,119,133,31,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Starting cash:",IDC_STATIC,21,150,45,8
+    EDITTEXT        IDC_STARTLOOT,119,147,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDC_OK,114,167,58,16
+    GROUPBOX        "Game Settings",IDC_STATIC,194,13,159,152
+    CONTROL         "Transparency effect on players",IDC_OPT_TRANSPARENCY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,22,114,11
+    CONTROL         "Share loot",IDC_OPT_SHARELOOT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,42,49,11
+    CONTROL         "Respawn players after:",IDC_OPT_RESPAWN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,62,86,11
+    EDITTEXT        IDC_RESPAWNTIME,292,62,30,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "seconds",IDC_STATIC,325,64,26,8
+    CONTROL         "Increase difficulty",IDC_OPT_DIFFICULTY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,82,86,11
+    CONTROL         "No loadout screen",IDC_NOLOADOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,102,71,11
+    CONTROL         "Allow players to damage each other",IDC_TEAMDAMAGECHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,122,126,11
+    CONTROL         "Enable cheats",IDC_ENABLECHEATS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,142,62,11
+    PUSHBUTTON      "&Cancel",IDC_CANCEL,188,167,58,16
+    GROUPBOX        "Server Settings",IDC_STATIC,9,13,181,97
+    LTEXT           "Max players:",IDC_STATIC,26,85,42,9
+    LTEXT           "Port:",IDC_STATIC,114,85,17,8
+    LTEXT           "Starting mission:",IDC_STATIC,14,69,55,9
+    GROUPBOX        "Mission Settings",IDC_STATIC,10,110,181,55
+END
+
+IDD_CONNECT DIALOGEX 0, 0, 207, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Connect to a Server"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_SERVERIP_EDIT,79,19,95,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "C&ancel",IDC_CANCEL,111,69,58,16
+    LTEXT           "Server IP address:",IDC_STATIC,15,23,61,9
+    DEFPUSHBUTTON   "Connect",IDC_CONNECT,37,69,58,16
+    LTEXT           "Port:",IDC_STATIC,16,50,17,8
+    EDITTEXT        IDC_PORT,79,48,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PASSWORD,79,34,95,12,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,16,36,33,9
+END
+
+IDD_CHGMISS DIALOGEX 0, 0, 206, 172
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a Mission"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDC_OK,45,151,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,111,151,50,14
+    LTEXT           "Select a mission to switch to:",IDC_STATIC,29,16,146,13
+    CONTROL         "",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,16,25,28,107
+    LISTBOX         IDD_MISSLIST,29,28,145,111,LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PLAYERDLG DIALOGEX 0, 0, 191, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Player Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,50,65,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,65,50,14
+    EDITTEXT        IDC_EDITNAME,63,20,102,15,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,25,23,33,11
+    LTEXT           "Model:",IDC_STATIC,25,43,33,11
+    COMBOBOX        IDC_COMBOMODEL,63,40,103,13,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BROWSER DIALOGEX 0, 0, 414, 236
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+CAPTION "Server Browser"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Connect",IDCONNECT,116,213,50,16,WS_DISABLED
+    PUSHBUTTON      "Close",IDCLOSE,248,213,50,16
+    PUSHBUTTON      "Refresh List",IDREFRESHLIST,182,213,50,16,WS_DISABLED
+    CONTROL         "",IDC_SERVERLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,19,385,145
+    LTEXT           "Disconnected.",IDC_GLOBALSTATUS,42,177,316,10
+    LTEXT           "Status:",IDC_STATIC,13,177,25,10
+    GROUPBOX        "Server List",IDC_STATIC,10,10,393,161
+    LTEXT           "0 servers available.",IDC_NUMSERVERS,13,191,95,9
+END
+
+IDD_PASSWORD DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,69,50,14
+    LTEXT           "This server requires a password. Enter it below:",IDC_STATIC,17,21,160,17
+    EDITTEXT        IDC_PASSWORD,17,41,152,16,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "&Multiplayer"
+    BEGIN
+        MENUITEM "&Connect...\tCtrl+J",         ID_SERVER_CONNECT
+        MENUITEM "&Host...\tCtrl+H",            ID_SERVER_HOST
+        MENUITEM "&Disconnect",                 ID_SERVER_DISCONNECT
+        MENUITEM SEPARATOR
+        POPUP "Host Options"
+        BEGIN
+            MENUITEM "Change Mission...",           ID_HOSTOPTIONS_CHANGEMISSION
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Server Browser...",           ID_SERVER_SERVERBROWSER
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Player Settings...\tCtrl+P", ID_OPTIONS_PLAYERSETTINGS
+    END
+    POPUP "&Debug"
+    BEGIN
+        MENUITEM "Damage",                      ID_DEBUG_DAMAGE
+        MENUITEM "Frobs",                       ID_DEBUG_FROBS
+        MENUITEM "General Messages",            ID_DEBUG_GENERAL
+        MENUITEM "Global Server",               ID_DEBUG_GLOBALSERVER
+        MENUITEM "Ghosts",                      ID_DEBUG_GHOSTS
+        MENUITEM "Inventory",                   ID_DEBUG_INVENTORY
+        MENUITEM "Network",                     ID_DEBUG_NETWORK
+        MENUITEM "Objects",                     ID_DEBUG_OBJECTS
+        MENUITEM "Packet Sends",                ID_DEBUG_PACKETSENDS
+        MENUITEM "Packet Receives",             ID_DEBUG_PACKETRECEIVES
+        MENUITEM "Proxy Actions",               ID_DEBUG_PROXYACTIONS
+        MENUITEM "Property Sends",              ID_DEBUG_PROPERTYSENDS
+        MENUITEM "Quest Data",                  ID_DEBUG_QUESTDATA
+        MENUITEM "Scripts",                     ID_DEBUG_SCRIPTS
+        MENUITEM "Sounds",                      ID_DEBUG_SOUNDS
+        MENUITEM SEPARATOR
+        MENUITEM "Disable All",                 ID_DEBUG_DISABLEALL
+        MENUITEM "Save Current Flags",          ID_DEBUG_SAVEFLAGS
+        MENUITEM SEPARATOR
+        MENUITEM "Echo Console",                ID_DEBUG_ECHO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS 
+BEGIN
+    VK_DOWN,        IDA_DOWN,               VIRTKEY, NOINVERT
+    VK_ESCAPE,      IDA_ESCAPE,             VIRTKEY, NOINVERT
+    "H",            IDA_HOST,               VIRTKEY, CONTROL, NOINVERT
+    "J",            IDA_JOIN,               VIRTKEY, CONTROL, NOINVERT
+    "P",            IDA_PLAYER,             VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          IDA_UP,                 VIRTKEY, NOINVERT
+    VK_RETURN,      IDA_ENTER,              VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+2                       RT_MANIFEST             "rt_manif.bin"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
